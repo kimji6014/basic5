@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.약 {
+    clear: both;
+}
+
+/* 자식은 부모의 넓이에 따라가고
+부모는 자식의 높이에 따라간다 */
+.전체 {
+    background-color: burlywood;
+    padding: 20px;
+    width: 600px;
+    margin: auto;
+    /* 영역을 가운데정렬 */
+}
+
+.전체 .첫째자식 {
+    background-color: aqua;
+    height: 500px;
+    background-image: url(https://cdn.pixabay.com/photo/2020/09/09/02/12/smearing-5556288_960_720.jpg);
+    transition: 0.3s;
+    background-repeat: no-repeat;
+    /* 배경이미지를 반복하지 말것(한장만) */
+    background-size: cover;
+}
+
+.전체 .첫째자식:hover {
+    background-image: url(https://blog.kakaocdn.net/dn/XlVZH/btqIH50as13/LwCnDkeRzRz9kETtUMaHyk/img.jpg);
+}
+
+.전체 .둘째자식 {
+    background-color: rgb(63, 182, 182);
+    margin-top: 20px;
+}
+
+.전체 .둘째자식 .첫째손자 {
+    float: left;
+    background-color: rgb(83, 129, 202);
+    height: 200px;
+    width: 31.3333%;
+    margin: 0 1%;
+    /* margin: 1%; 상하좌우 
+       margin: 1% 2%; 상하 좌우
+       margin: 1% 2% 3%; 상 좌우 하
+       margin: 1% 2% 3% 4%; 상 좌 하 우 (순서-시계방향)
+
+       마진을 적용시 오른쪽에 2%적용
+       margin: 0 2% 0 0; 상 좌 하 우
+       margin-right:2%;
+       */
+}
+
+.전체 .둘째자식 .둘째손자 {
+    float: left;
+    background-color: darkgoldenrod;
+    height: 200px;
+    width: 31.3333%;
+    margin: 0 1%;
+}
+
+.전체 .둘째자식 .셋째손자 {
+    float: left;
+    background-color: rgb(116, 47, 145);
+    height: 200px;
+    width: 31.3333%;
+    margin: 0 1%;
+}
+
+.전체 .셋째자식 {
+    background-color: #3F0071;
+    margin-top: 20px;
+}
+
+.전체 .셋째자식:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.전체 .셋째자식 .one {
+    background-color: #EA047E;
+    width: 24.25%;
+    float: left;
+    height: 200px;
+    margin-right: 1%;
+}
+
+.전체 .셋째자식 .two {
+    background-color: #FF6D28;
+    width: 24.25%;
+    float: left;
+    height: 200px;
+    margin-right: 1%;
+}
+.전체 .셋째자식 .two span{color: #c2ad7d;}
+
+.전체 .셋째자식 .three {
+    background-color: #FCE700;
+    width: 24.25%;
+    float: left;
+    height: 200px;
+    margin-right: 1%;
+}
+
+.전체 .셋째자식 .four {
+    background-color: #00F5FF;
+    width: 24.25%;
+    float: left;
+    height: 200px;
+}
